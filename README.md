@@ -1,3 +1,14 @@
+# Studying MEAN Stack 
+## Angular ```https://angular.io/start```
+This project is where I do explore and practice MEAN Stack, starting with Angular.
+Initially I thought of keeping separate repository for my every lesson but then realised that won't help. I will kepp separate branches for each lesson.
+
+List of branches and lessons:
+1. a01-component-with-service
+2. a02-router
+
+--------------------------------------------------------------------------------------
+
 # FirstApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
@@ -25,3 +36,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+------------------------------------------
