@@ -18,7 +18,7 @@ user@env directory_path % ```ng new first-app --skip-tests``` <br>
 8. For starters below constructor function, we can add new function named getHeaderAlpha that would return a string.
 9. Thats it for this project. I would take router to next project.
 
-## a02-router
+## a02-router-with-data-share-service
 1. ***/app/app-routing.module.ts*** is it. We'll be adding objects in routes array. Example: <br> ```const routes: Routes = [ {path:'', component:FirstComponentComponent}, {path:'/second', component:SecondComponentComponent} ];```
 2. Update app.components.html file with ```<router-outlet></router-outlet>``` just below the header.
 3. Test application -> it is going smooth.
