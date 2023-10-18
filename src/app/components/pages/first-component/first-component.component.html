@@ -1,0 +1,13 @@
+<p>Please share your suggestion below</p>
+<div>
+    <h2>First Component</h2>
+    <form (ngSubmit)="onSubmit(userInput)">
+      <label for="userInput">Enter something:</label>
+      <input type="text" id="userInput" name="userInput" [(ngModel)]="userInput" required>
+      <!-- NOTE: The [(ngModel)] directive is used to bind the input field's value to the userInput property in your component. -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  
+

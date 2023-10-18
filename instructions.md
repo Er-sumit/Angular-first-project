@@ -1,4 +1,5 @@
 # Instructions for AngularJS Project
+## a01
 Assumed that npm and angularCLI is already installed. ```npm install -g @angular/cli```
 1. Start new project with command ```ng new first-app --skip-tests```. Here skip-tests argument is optional.
 user@env directory_path % ```ng new first-app --skip-tests``` <br>
@@ -17,3 +18,13 @@ user@env directory_path % ```ng new first-app --skip-tests``` <br>
 8. For starters below constructor function, we can add new function named getHeaderAlpha that would return a string.
 9. Thats it for this project. I would take router to next project.
 
+## a02-router
+1. ***/app/app-routing.module.ts*** is it. We'll be adding objects in routes array. Example: <br> ```const routes: Routes = [ {path:'', component:FirstComponentComponent}, {path:'/second', component:SecondComponentComponent} ];```
+2. Update app.components.html file with ```<router-outlet></router-outlet>``` just below the header.
+3. Test application -> it is going smooth.
+4. Now lets try to share data between these two components. So I'm trying to get input box on FirstComponent and then display message entered on FirstComponent on to the SecondComponent.
+    1. Update FirstComponent html to get input(suggestion) from user. In here we need to use htmlform for data input, hence ensure we've 'FormsModule' imported in app.module.ts. ```import { FormsModule } from '@angular/forms';```
+    2. To share data between components, lets create a shared service. Angular's Dependency Injection would help us to share data between components. ```ng g s services/shared-data-service``` & let this service have string property(attribute or object) to store value of input.
+    3. In FirstComponent, lets update the component's logic to interact with the shared service. Here setting the userInput property in the shared service when the user submits the form. <br> As value is stored in shared service, we'll be able to retrieve it in SecondComponent component. Here in FirstComponent component we need to navigate to second path onSubmit. To achieve this we will add another private parameter in constructor i.e. router:Router. Then we shall be able to use router instance of Router class in FirstComponent class, as: <br> ```this.router.navigate(['/second']);```
+    5. We're good to modify SecondComponent component to retrieve value from shared-data-service and display on page.
+    
